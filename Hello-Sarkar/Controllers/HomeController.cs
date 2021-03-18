@@ -12,16 +12,19 @@ namespace Hello_Sarkar.Controllers
 {
     public class HomeController : Controller
     {
+     
         private readonly ILogger<HomeController> _logger;
+        private IIssueRepository _issueRepository;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger , IIssueRepository issueRepository)
         {
             _logger = logger;
+            _issueRepository = issueRepository;
         }
 
-        public IActionResult Index()
+        public string Index()
         {
-            return View();
+            return _issueRepository.GetIssue(1).Subject;
         }
 
         public IActionResult Privacy()
