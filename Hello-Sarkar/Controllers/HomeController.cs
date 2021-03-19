@@ -14,18 +14,15 @@ namespace Hello_Sarkar.Controllers
     {
      
         private readonly ILogger<HomeController> _logger;
-        private IIssueRepository _issueRepository;
 
-        public HomeController(ILogger<HomeController> logger , IIssueRepository issueRepository)
+        public HomeController(ILogger<HomeController> logger )
         {
             _logger = logger;
-            _issueRepository = issueRepository;
         }
 
-        public string Index()
+        public IActionResult Index()
         {
-            return _issueRepository.GetIssue(1).Subject;
-        }
+            return View();        }
 
         public IActionResult Privacy()
         {
