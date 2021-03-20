@@ -12,7 +12,7 @@
                 <h3>@issue.Subject</h3>
             </div>
             <div class="card-footer text-center">
-                <a href="#" class="btn btn-primary">View</a>
+                <a asp-controller="admin" asp-action="details" asp-route-id="@issue.ID" class="btn btn-primary">View</a>
             </div>
         </div> 
     }
