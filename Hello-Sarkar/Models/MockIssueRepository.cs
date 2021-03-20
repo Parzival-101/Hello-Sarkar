@@ -19,6 +19,12 @@ namespace Hello_Sarkar.Models
             };
 
         }
+
+        public IEnumerable<Issue> GetAllIssue()
+        {
+            return _issueList;
+        }
+
         public Issue GetIssue(int Id)
         {
             return _issueList.FirstOrDefault(e => e.ID == Id);

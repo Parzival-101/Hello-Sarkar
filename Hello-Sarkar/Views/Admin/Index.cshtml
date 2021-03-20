@@ -1,0 +1,28 @@
+﻿@model IEnumerable<Hello_Sarkar.Models.Issue>
+
+    <html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Subject</th>
+                    <th>District</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var issue in Model)
+                {
+                    <tr>
+                        <td>@issue.ID</td>
+                        <td>@issue.Subject</td>
+                        <td>@issue.District</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </body>
+    </html>

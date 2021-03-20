@@ -8,5 +8,6 @@ namespace Hello_Sarkar.Models
     public interface IIssueRepository
     {
         Issue GetIssue(int Id);
+        IEnumerable<Issue> GetAllIssue();
     }
 }

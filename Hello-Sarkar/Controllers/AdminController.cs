@@ -18,10 +18,10 @@ namespace Hello_Sarkar.Controllers
 
         }
         // GET: AdminController1
-        public string Index()
+        public ActionResult Index()
         {
-            return _issueRepository.GetIssue(1).Subject;
-
+            var model = _issueRepository.GetAllIssue();
+            return View(model);
         }
 
         // GET: AdminController1/Details/5
