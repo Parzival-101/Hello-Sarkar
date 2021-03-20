@@ -1,18 +1,18 @@
-﻿@model Hello_Sarkar.Models.Issue
+﻿@model Hello_Sarkar.ViewModel.AdminDetailsViewModel
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title></title>
 </head>
 <body>
-    <h3>@ViewBag.PageTitle</h3>
+    <h3>@Model.PageTitle</h3>
     <div>
-        Location : @Model.Street ,@Model.Place ,@Model.District
+        Location : @Model.Issue.Street ,@Model.Issue.Place ,@Model.Issue.District
     </div>
     <div>
-       Issue: @Model.Subject
+       Issue: @Model.Issue.Subject
         <br />
-        <p> @Model.IssueDetails</p>
+        <p> @Model.Issue.IssueDetails</p>
     </div>
 </body>
 </html>

@@ -1,4 +1,5 @@
 ﻿using Hello_Sarkar.Models;
+using Hello_Sarkar.ViewModel;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -26,9 +27,13 @@ namespace Hello_Sarkar.Controllers
         // GET: AdminController1/Details/5
         public ActionResult Details()
         {
-            Issue model = _issueRepository.GetIssue(1);
-            ViewBag.PageTitle = "Issues Info";
-            return View(model);
+            AdminDetailsViewModel adminDetailsViewModel = new AdminDetailsViewModel()
+            {
+                Issue = _issueRepository.GetIssue(1),
+                PageTitle = "Issues Info"
+        };
+         
+            return View(adminDetailsViewModel);
         }
 
         // GET: AdminController1/Create
