@@ -50,15 +50,12 @@ namespace Hello_Sarkar.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(News news)
         {
-            News newNews = _newsRepository.Add(news);
-            try
+            if(ModelState.IsValid)
             {
+                News newNews = _newsRepository.Add(news);
                 return RedirectToAction("details", new { id = newNews.Id });
             }
-            catch
-            {
                 return View();
-            }
         }
 
         // GET: AdminController1/Edit/5
