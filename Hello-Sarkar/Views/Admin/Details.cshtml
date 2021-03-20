@@ -5,12 +5,25 @@
 }
 
 
-<h3>@Model.PageTitle</h3>
-<div>
-    Location : @Model.Issue.Street ,@Model.Issue.Place ,@Model.Issue.District
-</div>
-<div>
-    Issue: @Model.Issue.Subject
-    <br />
-    <p> @Model.Issue.IssueDetails</p>
+<div class="row justify-content-sm-center m-3">
+    <div class="col-sm-8">
+        <div class="card">
+            <div class="card-header">
+                <h1>@Model.Issue.Subject</h1>
+            </div>
+
+            <div class="card-body text-center">
+                <h4>Issue no: @Model.Issue.ID</h4>
+                <h4>Location: @Model.Issue.Street ,@Model.Issue.Place ,@Model.Issue.District</h4>
+                <br />
+                <hr />
+                <h4> @Model.Issue.IssueDetails</h4>
+            </div>
+
+            <div class="card-footer text-center">
+                <a href="#" class="btn btn-primary">Back</a>
+                <a href="#" class="btn btn-danger">Delete</a>
+            </div>
+        </div>
+    </div>
 </div>
