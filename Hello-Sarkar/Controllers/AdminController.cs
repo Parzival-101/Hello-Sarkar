@@ -1,5 +1,5 @@
 ﻿using Hello_Sarkar.Models;
-using Hello_Sarkar.ViewModel;
+using Hello_Sarkar.ViewModels;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;

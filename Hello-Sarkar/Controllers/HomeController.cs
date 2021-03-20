@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
-//using Hello_Sarkar.ViewModel;
+//using Hello_Sarkar.ViewModels;
 
 namespace Hello_Sarkar.Controllers
 {
