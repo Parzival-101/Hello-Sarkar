@@ -20,6 +20,23 @@ namespace Hello_Sarkar.Models
 
         }
 
+        public Issue Add(Issue issue)
+        {
+            issue.ID = _issueList.Max(e => e.ID) + 1;
+            _issueList.Add(issue);
+            return issue;
+        }
+
+        public Issue Delete(int id)
+        {
+            Issue issue = _issueList.FirstOrDefault(e => e.ID == id);
+            if (issue != null)
+            {
+                _issueList.Remove(issue);
+            }
+            return issue;
+        }
+
         public IEnumerable<Issue> GetAllIssue()
         {
             return _issueList;
@@ -28,6 +45,20 @@ namespace Hello_Sarkar.Models
         public Issue GetIssue(int Id)
         {
             return _issueList.FirstOrDefault(e => e.ID == Id);
+        }
+
+        public Issue Update(Issue issuechanges)
+        {
+            Issue issue = _issueList.FirstOrDefault(e => e.ID == issuechanges.ID);
+            if (issue != null)
+            {
+                issue.Subject = issuechanges.Subject;
+                issue.IssueDetails = issuechanges.IssueDetails;
+                issue.Street = issuechanges.Street;
+                issue.Place = issuechanges.Place;
+                issue.District = issuechanges.District;
+            }
+            return issue;
         }
     }
 }
