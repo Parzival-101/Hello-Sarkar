@@ -12,9 +12,12 @@ namespace Hello_Sarkar.Controllers
     public class AdminController : Controller
     {
         private readonly IIssueRepository _issueRepository;
-        public AdminController(IIssueRepository issueRepository)
+        private readonly INewsRepository _newsRepository;
+
+        public AdminController(IIssueRepository issueRepository ,INewsRepository newsRepository)
         {
             _issueRepository = issueRepository;
+            _newsRepository = newsRepository;
 
         }
         // GET: Issues List 
@@ -45,11 +48,12 @@ namespace Hello_Sarkar.Controllers
         // POST: AdminController1/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public ActionResult Create(News news)
         {
+            News newNews = _newsRepository.Add(news);
             try
             {
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("details", new { id = newNews.Id });
             }
             catch
             {

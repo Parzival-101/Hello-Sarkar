@@ -36,6 +36,7 @@ namespace Hello_Sarkar
             services.AddControllersWithViews();
             services.AddRazorPages();
             services.AddScoped<IIssueRepository, MockIssueRepository>();
+            services.AddScoped<INewsRepository, MockNewsRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
