@@ -1,0 +1,18 @@
+﻿@model Hello_Sarkar.Models.Issue
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <h3>@ViewBag.PageTitle</h3>
+    <div>
+        Location : @Model.Street ,@Model.Place ,@Model.District
+    </div>
+    <div>
+       Issue: @Model.Subject
+        <br />
+        <p> @Model.IssueDetails</p>
+    </div>
+</body>
+</html>

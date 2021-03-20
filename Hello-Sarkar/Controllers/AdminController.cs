@@ -27,6 +27,7 @@ namespace Hello_Sarkar.Controllers
         public ActionResult Details()
         {
             Issue model = _issueRepository.GetIssue(1);
+            ViewBag.PageTitle = "Issues Info";
             return View(model);
         }
 
