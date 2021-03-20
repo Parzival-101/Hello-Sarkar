@@ -17,14 +17,14 @@ namespace Hello_Sarkar.Controllers
             _issueRepository = issueRepository;
 
         }
-        // GET: AdminController1
+        // GET: Issues List 
         public ActionResult Index()
         {
             var model = _issueRepository.GetAllIssue();
             return View(model);
         }
 
-        // GET: AdminController1/Details/5
+        // GET: Issues Details
         public ActionResult Details(int id)
         {
             AdminDetailsViewModel adminDetailsViewModel = new AdminDetailsViewModel()
@@ -36,7 +36,7 @@ namespace Hello_Sarkar.Controllers
             return View(adminDetailsViewModel);
         }
 
-        // GET: AdminController1/Create
+        // GET: Create a News 
         public ActionResult Create()
         {
             return View();
