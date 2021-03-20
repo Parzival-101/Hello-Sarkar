@@ -9,5 +9,9 @@ namespace Hello_Sarkar.Models
     {
         Issue GetIssue(int Id);
         IEnumerable<Issue> GetAllIssue();
+        Issue Add(Issue issue);
+        Issue Update(Issue issuechanges);
+        Issue Delete(int id);
+
     }
 }
