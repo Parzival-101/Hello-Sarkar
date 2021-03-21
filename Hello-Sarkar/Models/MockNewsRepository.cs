@@ -24,5 +24,37 @@ namespace Hello_Sarkar.Models
             _newsList.Add(news);
             return news;
         }
+
+        public News Delete(int id)
+        {
+            News news = _newsList.FirstOrDefault(e => e.Id == id);
+            if (news != null)
+            {
+                _newsList.Remove(news);
+            }
+            return news;
+        }
+
+        public IEnumerable<News> GetAllNews()
+        {
+            return _newsList;
+        }
+
+        public News GetNews(int Id)
+        {
+            return _newsList.FirstOrDefault(e => e.Id == Id);
+        }
+
+        public News Update(News newsChanges)
+        {
+            News news = _newsList.FirstOrDefault(e => e.Id == newsChanges.Id);
+            if (news != null)
+            {
+                news.Title = newsChanges.Title;
+                news.Info = newsChanges.Info;
+                news.Source = newsChanges.Source;
+            }
+            return news;
+        }
     }
 }
