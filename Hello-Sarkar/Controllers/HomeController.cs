@@ -14,16 +14,36 @@ namespace Hello_Sarkar.Controllers
     {
      
         private readonly ILogger<HomeController> _logger;
+        private readonly IIssueRepository _issueRepository;
 
-        public HomeController(ILogger<HomeController> logger )
+        public HomeController(ILogger<HomeController> logger , IIssueRepository issueRepository )
         {
             _logger = logger;
+            issueRepository = _issueRepository;
         }
 
         public IActionResult Index()
         {
-            return View();        }
+            return View();     
+        }
 
+        [HttpGet]
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Create(Issue issue)
+        {
+            if (ModelState.IsValid)
+            {
+                Issue newissue = _issueRepository.Add(issue);
+                return RedirectToAction("details", new { id = newissue.ID });
+            }
+            return View();
+        }
         public IActionResult Privacy()
         {
             return View();
