@@ -19,7 +19,7 @@ namespace Hello_Sarkar.Controllers
         public HomeController(ILogger<HomeController> logger , IIssueRepository issueRepository )
         {
             _logger = logger;
-            issueRepository = _issueRepository;
+            _issueRepository = issueRepository;
         }
 
         public IActionResult Index()
