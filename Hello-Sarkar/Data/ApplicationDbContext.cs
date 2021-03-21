@@ -16,5 +16,11 @@ namespace Hello_Sarkar.Data
 
         public DbSet<Issue> Issues { get; set; }
         public DbSet<News> News { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.Seed();
+        }
     }
 }
