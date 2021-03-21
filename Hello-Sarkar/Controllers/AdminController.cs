@@ -28,11 +28,11 @@ namespace Hello_Sarkar.Controllers
         }
 
         // GET: Issues Details
-        public ActionResult Details(int id)
+        public ActionResult Details(int? id)
         {
             AdminDetailsViewModel adminDetailsViewModel = new AdminDetailsViewModel()
             {
-                Issue = _issueRepository.GetIssue(id),
+                Issue = _issueRepository.GetIssue(id??1),
                 PageTitle = "Issues Info"
         };
          
