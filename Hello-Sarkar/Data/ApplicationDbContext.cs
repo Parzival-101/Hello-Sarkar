@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using Hello_Sarkar.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -12,5 +13,8 @@ namespace Hello_Sarkar.Data
             : base(options)
         {
         }
+
+        public DbSet<Issue> Issues { get; set; }
+        public DbSet<News> News { get; set; }
     }
 }

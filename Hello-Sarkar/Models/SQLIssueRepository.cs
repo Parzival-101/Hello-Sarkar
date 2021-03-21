@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Hello_Sarkar.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -7,9 +8,9 @@ namespace Hello_Sarkar.Models
 {
     public class SQLIssueRepository : IIssueRepository
     {
-        private readonly AppDbContext context;
+        private readonly ApplicationDbContext context;
 
-        public SQLIssueRepository(AppDbContext context)
+        public SQLIssueRepository(ApplicationDbContext context)
         {
             this.context = context;
         }
