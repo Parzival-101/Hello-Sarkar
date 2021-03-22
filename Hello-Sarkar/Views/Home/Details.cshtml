@@ -1,0 +1,28 @@
+﻿@model NewsDetailsViewModel
+
+@{
+    ViewBag.Title = "News Info";
+}
+
+
+<div class="row justify-content-sm-center m-3">
+    <div class="col-sm-8">
+        <div class="card">
+            <div class="card-header">
+                <h1>@Model.News.Title</h1>
+            </div>
+
+            <div class="card-body text-center">
+                <h4>Source: @Model.News.Source</h4>
+                <br />
+                <hr />
+                <h4> @Model.News.Info</h4>
+            </div>
+
+            <div class="card-footer text-center">
+                <a asp-controller="home" asp-action="index" class="btn btn-primary">Back</a>
+                <a asp-controller="home" asp-action="Details" asp-route-data="new {id =Model.News.Id+1"}" class="btn btn-secondary">Next</a>
+            </div>
+        </div>
+    </div>
+</div>
