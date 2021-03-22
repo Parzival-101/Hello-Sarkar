@@ -36,8 +36,8 @@ namespace Hello_Sarkar
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
             services.AddRazorPages();
-            services.AddScoped<IIssueRepository, SQLIssueRepository>();
-            services.AddScoped<INewsRepository, SQLNewsRepository>();
+            services.AddScoped<IIssueRepository, MockIssueRepository>();
+            services.AddScoped<INewsRepository, MockNewsRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
