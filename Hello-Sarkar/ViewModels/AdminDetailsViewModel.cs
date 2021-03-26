@@ -10,5 +10,6 @@ namespace Hello_Sarkar.ViewModels
     {
         public Issue Issue { get; set; }
         public string PageTitle { get; set; }
+        public int Total { get; set; }
     }
 }

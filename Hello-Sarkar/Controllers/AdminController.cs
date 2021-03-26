@@ -33,10 +33,15 @@ namespace Hello_Sarkar.Controllers
             AdminDetailsViewModel adminDetailsViewModel = new AdminDetailsViewModel()
             {
                 Issue = _issueRepository.GetIssue(id??1),
-                PageTitle = "Issues Info"
+                PageTitle = "Issues Info",
+                Total = _issueRepository.GetAllIssue().Count()
         };
             var models = _issueRepository.GetAllIssue().Count();
             if (id > models)
+            {
+                return RedirectToAction("index");
+            }
+            else if (id < 1)
             {
                 return RedirectToAction("index");
             }
