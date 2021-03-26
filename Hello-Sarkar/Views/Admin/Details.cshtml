@@ -22,6 +22,10 @@
 
             <div class="card-footer text-center">
                 <a asp-controller="admin" asp-action="index" class="btn btn-primary">Back</a>
+                @{
+                    var next = Model.Issue.ID + 1;
+                }
+                <a asp-controller="admin" asp-action="details" asp-route-id="@next" class="btn btn-primary">Next</a>
                 <a href="#" class="btn btn-danger">Delete</a>
             </div>
         </div>

@@ -21,7 +21,10 @@
 
             <div class="card-footer text-center">
                 <a asp-controller="home" asp-action="index" class="btn btn-primary">Back</a>
-                <a asp-controller="home" asp-action="Details" asp-route-data="new {id =Model.News.Id+1"}" class="btn btn-secondary">Next</a>
+                @{ 
+                    var next = Model.News.Id + 1;
+                }
+                <a asp-controller="home" asp-action="Details" asp-route-id="@next" class="btn btn-secondary">Next</a>
             </div>
         </div>
     </div>
