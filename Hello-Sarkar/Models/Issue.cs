@@ -11,7 +11,7 @@ namespace Hello_Sarkar.Models
         public int ID { get; set; }
         public DateTime IssuedDate { get; set; }
         
-        [Required, MaxLength(20)]
+        [Required, MaxLength(50, ErrorMessage ="Give short title")]
         public string Subject { get; set; }
 
         [Required]
