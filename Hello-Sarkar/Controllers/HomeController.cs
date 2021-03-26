@@ -37,10 +37,14 @@ namespace Hello_Sarkar.Controllers
             NewsDetailsViewModel newsDetailsViewModel = new NewsDetailsViewModel()
             {
                 News = _newsRepository.GetNews(id ??1),
-                PageTitle = "Detailed News"
+                PageTitle = "Detailed News",
+                Total = _newsRepository.GetAllNews().Count()
             };
-            var models = _newsRepository.GetAllNews().Count();
-            if (id > models)
+            if (id > newsDetailsViewModel.Total)
+            {
+                return RedirectToAction("index");
+            }
+            else if (id < 1)
             {
                 return RedirectToAction("index");
             }
