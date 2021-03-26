@@ -1,0 +1,33 @@
+﻿using Microsoft.EntityFrameworkCore.Migrations;
+
+namespace Hello_Sarkar.Data.Migrations
+{
+    public partial class SeedNewsData : Migration
+    {
+        protected override void Up(MigrationBuilder migrationBuilder)
+        {
+            migrationBuilder.InsertData(
+                table: "News",
+                columns: new[] { "Id", "Info", "Source", "Title" },
+                values: new object[] { 1, "The Commission for the Investigation of Abuse of Authority (CIAA) on registered a corruption case against 17 people, including seven government officials, for illegally transferring government land in Lalitpur to a private housing company.According to the CIAA Spokesperson Taranath Adhikari,the accused transferred the ownership of the land to the private company by tampering the survey map published in 2022 BS.The private company then sold the land to the general public.The transferred land is spread over an area of eight ropanis in wards 23 and 28 of Lalitpur Metropolitan City.", "NepaliSansar", "CIAA Files Corruption Case Against 17, Including 7 Govt. Officials!" });
+
+            migrationBuilder.InsertData(
+                table: "News",
+                columns: new[] { "Id", "Info", "Source", "Title" },
+                values: new object[] { 2, "Over 500,000 entrepreneurs affected by Covid-19 have received an income tax exemption of over Rs2 billion, the tax authority has said.Section 25 of the Financial Act 2020 - 21 provisions tax exemption for taxpayers depending on the size of their annual transactions.According to the Inland Revenue Department, the government waived the income tax amounting to Rs2.16 billion for 512, 753 taxpayers under this scheme.“They were given an opportunity till mid - March this year to pay a certain portion of their tax liability of the last fiscal year and get the rest of their tax liabilities waived off,” said Arjun Dhakal", "Kathmandupost", "Over 500,000 taxpayers hit by pandemic get tax waiver worth over Rs2 billion" });
+        }
+
+        protected override void Down(MigrationBuilder migrationBuilder)
+        {
+            migrationBuilder.DeleteData(
+                table: "News",
+                keyColumn: "Id",
+                keyValue: 1);
+
+            migrationBuilder.DeleteData(
+                table: "News",
+                keyColumn: "Id",
+                keyValue: 2);
+        }
+    }
+}
