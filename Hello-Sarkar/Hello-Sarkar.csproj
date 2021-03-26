@@ -15,6 +15,8 @@
     <Compile Remove="Data\Migrations\20210326072937_seednewsdata.Designer.cs" />
     <Compile Remove="Data\Migrations\20210326073519_seednewsdata.cs" />
     <Compile Remove="Data\Migrations\20210326073519_seednewsdata.Designer.cs" />
+    <Compile Remove="Data\Migrations\20210326085442_HeadlineLenghtNewsModified.cs" />
+    <Compile Remove="Data\Migrations\20210326085442_HeadlineLenghtNewsModified.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

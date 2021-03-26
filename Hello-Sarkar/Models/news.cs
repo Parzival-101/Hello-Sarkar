@@ -10,7 +10,7 @@ namespace Hello_Sarkar.Models
     {
         public int Id { get; set; }
 
-        [Required, MaxLength(50)]
+        [Required, MaxLength(100 , ErrorMessage ="Keep the heading short")]
         [Display(Name ="News Headline")]
         public string Title { get; set; }
 
