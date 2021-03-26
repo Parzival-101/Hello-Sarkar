@@ -33,12 +33,7 @@ namespace Hello_Sarkar.Data
                     "for taxpayers depending on the size of their annual transactions.According to the Inland Revenue Department" +
                     ", the government waived the income tax amounting to Rs2.16 billion for 512, 753 taxpayers under this scheme." +
                     "“They were given an opportunity till mid - March this year to pay a certain portion of their tax liability" +
-                    " of the last fiscal year and get the rest of their tax liabilities waived off,” said Arjun Dhakal, information " +
-                    "officer at the department.The first category of taxpayers receiving the discount are those whose annual transaction" +
-                    " is up to Rs2 million or those whose annual income is up to Rs200, 000 and need to pay the tax.As per the Financial" +
-                    " Act, they are supposed to get an exemption of 75 percent of the total tax liability in fiscal year 2019 - 20." ,
-          
-
+                    " of the last fiscal year and get the rest of their tax liabilities waived off,” said Arjun Dhakal",
                     Source="Kathmandupost"
                 }
                 );
