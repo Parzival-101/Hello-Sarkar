@@ -7,12 +7,12 @@
 
 <div class="row justify-content-sm-center m-3">
     <div class="col-sm-8">
-        <div class="card">
-            <div class="card-header">
+        <div class="card bg-success">
+            <div class="card-header text-center">
                 <h1>@Model.Issue.Subject</h1>
             </div>
 
-            <div class="card-body text-center">
+            <div class="card-body text-center text-white">
                 <h4>Issue no: @Model.Issue.ID</h4>
                 <h4>Location: @Model.Issue.Street ,@Model.Issue.Place ,@Model.Issue.District</h4>
                 <br />
@@ -21,7 +21,7 @@
             </div>
 
             <div class="card-footer text-center">
-                <a asp-controller="admin" asp-action="index" class="btn btn-primary">Back</a>
+                <a asp-controller="admin" asp-action="index" class="btn btn-dark">Back</a>
                 @{
                     var next = Model.Issue.ID + 1;
                     var previous = Model.Issue.ID - 1;

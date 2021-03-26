@@ -7,12 +7,12 @@
 <div class="card-deck">
     @foreach (var news in Model)
     {
-        <div class="card m-3">
-            <div class="card-header">
+        <div class="card text-info bg-dark m-3">
+            <div class="card-header text-center">
                 <h3>@news.Title</h3>
             </div>
             <div class="card-footer text-center">
-                <a asp-controller="home" asp-action="details" asp-route-id="@news.Id" class="btn btn-primary">View</a>
+                <a asp-controller="home" asp-action="details" asp-route-id="@news.Id" class="btn btn-light">View</a>
             </div>
         </div>
     }
