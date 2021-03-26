@@ -35,7 +35,11 @@ namespace Hello_Sarkar.Controllers
                 Issue = _issueRepository.GetIssue(id??1),
                 PageTitle = "Issues Info"
         };
-         
+            var models = _issueRepository.GetAllIssue().Count();
+            if (id > models)
+            {
+                return RedirectToAction("index");
+            }
             return View(adminDetailsViewModel);
         }
 

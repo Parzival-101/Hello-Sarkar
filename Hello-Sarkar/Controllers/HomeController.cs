@@ -39,7 +39,11 @@ namespace Hello_Sarkar.Controllers
                 News = _newsRepository.GetNews(id ??1),
                 PageTitle = "Detailed News"
             };
-
+            var models = _newsRepository.GetAllNews().Count();
+            if (id > models)
+            {
+                return RedirectToAction("index");
+            }
             return View(newsDetailsViewModel);
         }
 
